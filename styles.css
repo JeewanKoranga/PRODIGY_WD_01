@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #007bff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-items li {
+    margin: 0 15px;
+  }
+  
+  .nav-items a {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-items a:hover {
+    color: #ffdd57;
+  }
+  
+  .search-bar {
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Buttons Group */
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    background-color: #0056b3;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .btn i {
+    margin-right: 8px;
+  }
+  
+  .btn:hover {
+    background-color: #004494;
+    transform: scale(1.05);
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #e3f2fd;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    color: #007bff;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* About Section */
+  .about, .contact {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .about h2, .contact h2 {
+    font-size: 28px;
+    color: #007bff;
+  }
+  
+  .about p, .contact p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Contact Form */
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact input, .contact textarea {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .contact button:hover {
+    background-color: #0056b3;
+  }
+  
+/* Hover Effect for Contact */
+.contact-hover {
+    position: relative;
+  }
+  
+  .contact-hover .contact-info {
+    display: none;
+    position: absolute;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    top: 30px;
+    left: 0;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  
+  .contact-hover:hover .contact-info {
+    display: block;
+  }
+  
+  .contact-hover .contact-info p {
+    margin: 5px 0;
+  }
+  
+/* General Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212; /* Black background */
+    color: #ffffff; /* White text */
+  }
+  
+  /* Navbar */
+  body.dark-mode .navbar {
+    background-color: #1f1f1f; /* Dark gray navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  body.dark-mode .nav-items a {
+    color: #ffffff; /* White text for navigation links */
+  }
+  
+  body.dark-mode .nav-items a:hover {
+    color: #90caf9; /* Light blue hover color for links */
+  }
+  
+  /* Buttons - Blue Box Styling */
+  body.dark-mode .btn {
+    background-color: #007bff; /* Keep blue background for buttons */
+    color: #ffffff; /* White text for buttons */
+  }
+  
+  body.dark-mode .btn:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+  }
+  
+  /* Search Bar */
+  body.dark-mode .search-bar {
+    background-color: #333333; /* Darker gray background */
+    color: #ffffff; /* White text */
+    border: 1px solid #444444; /* Gray border */
+  }
+  
+  /* Hero Section */
+  body.dark-mode .hero {
+    background-color: #1f1f1f; /* Dark gray for hero section */
+  }
+  
+  body.dark-mode .hero h1,
+  body.dark-mode .hero p {
+    color: #ffffff; /* White text */
+  }
+  
+  body.dark-mode .cta-button {
+    background-color: #007bff; /* Blue for call-to-action buttons */
+    color: #ffffff; /* White text */
+  }
+  
+  body.dark-mode .cta-button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+  }
+  
+  /* About and Contact Sections */
+  body.dark-mode .about,
+  body.dark-mode .contact {
+    background-color: #1f1f1f; /* Dark gray */
+  }
+  
+  body.dark-mode .about h2,
+  body.dark-mode .about p,
+  body.dark-mode .contact h2,
+  body.dark-mode .contact p {
+    color: #ffffff; /* White text */
+  }
+  
+  /* Contact Form */
+  body.dark-mode .contact input,
+  body.dark-mode .contact textarea {
+    background-color: #333333; /* Darker gray form fields */
+    color: #ffffff; /* White text */
+    border: 1px solid #444444;
+  }
+  
+  body.dark-mode .contact button {
+    background-color: #007bff; /* Blue buttons for contact section */
+    color: #ffffff; /* White text */
+  }
+  
+  body.dark-mode .contact button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+  }
+  
+  
+  
